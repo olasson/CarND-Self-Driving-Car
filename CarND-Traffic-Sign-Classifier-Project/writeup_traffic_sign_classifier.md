@@ -146,8 +146,16 @@ I used the Adam optimizer. It is very popular in deep learning, and I use it as 
 * SIGMA = 0.1
 * MU = 0
 * LEARNING_RATE = 0.0009
+* ACCURACY_THRESHOLD = 0.960
 
-I mainly tuned the learning rate. For very low learning rates I got horrible results, I'm guessing that the optimizer had trouble with convergence, but I'm not sure. The main concern when choosing EPOCHS was overfitting. I tried 50, but got better accuracy with 65, it is somewhat arbitrary. I set the batch size to 100 since smaller batch sizes seemed to help with training speed. 
+
+I mainly tuned the learning rate. For very low learning rates I got horrible results, I'm guessing that the optimizer had trouble with convergence, but I'm not sure. 
+
+After some very useful Udacity feedback, I added the ACCURACY_THRESHOLD parameter. If the validation accuracy is greater than or equal to this, the training stops.
+* Pros: Avoids the scenarios I ran into before, where EPOCH 65 produced worse accuracy than EPOCH 10. 
+* Pros: If tuned sensibly, can help countering overfitting. 
+* Cons: Effectively caps the accuracy of the model at ACCURACY_THRESHOLD. My model stopped at EPOCH 11, but I don't have any guarantees that any later EPOCH would not produce better accuracy. This however, can be subjected to the trial and error method, to see if a better accuracy can be achieved. Time constraints prevents me from doing this right now. 
+* Overall a very simple, straightforward way of deciding when to stop training. In my case, I achived both better validation accuracy and faster training time with this new parameter.    
 
 ## 
 
@@ -157,9 +165,9 @@ The code is found in the 9th cell of the Ipython notebook.
 
 ## My final model results were:
 * training set accuracy of: I have to admit, I did not calculate this. 
-* validation set accuracy of 0.956
-* test set accuracy of 0.953
-* test set (images I found) accuracy of 1
+* validation set accuracy of 0.961
+* test set accuracy of 0.940
+* test set (images I found) accuracy of 1.000
 
 ## If a well known architecture was chosen:
 * What architecture was chosen?
@@ -198,12 +206,12 @@ The model was able to correctly guess 5 of the 5 traffic signs, which gives an a
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for the softmax probabilities is found in the 13th cell of the Ipython notebook.
+The code for the softmax probabilities is found in the 14th cell of the Ipython notebook.
 
 
 ![alt text][image10m]
 
-As the image shows, the model is 100% certain of all images except for the stop sign which has a 98% probability. It would seem that the model has slightly confused it with a 30 km/h sign, but there is only a 2% probability of that beeing true. It would seem that my model is fairly reliable when it comes to predicting traffic signs, although I acknowledge that a much harder test set would probably not lead to this kind of accuracy. 
+As the image shows, the model is 100% certain of all images. It would seem that my model is fairly reliable when it comes to predicting traffic signs, although I acknowledge that a much harder test set would probably not lead to this kind of accuracy. 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
