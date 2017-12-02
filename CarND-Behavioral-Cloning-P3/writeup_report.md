@@ -140,11 +140,11 @@ The next step was to recover data to teach the model how to "recover" if it veer
 
 Based on the nVidia paper, I included two methods for augmenting the data: shift (model.py line 87) and rotation (model.py line 109). I used these methods to further augment my validation data, to make it harder for the model and hopefully get better generalization. 
 
-Here is what a shifted image looks like: 
+Here is what a rotated image looks like: 
 
 ![alt text][img3]
 
-Here is what a rotated image looks like:
+Here is what a shifted image looks like:
 
 ![alt text][img4]
 
