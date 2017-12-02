@@ -29,7 +29,7 @@ The goals / steps of this project are the following:
 [img1]: ./images/before_pre_processing.png "Image before pre-processing"
 [img2]: ./images/after_pre_processing.png "Image after pre-processing"
 [img3]: ./images/rotated_img.png "Image with random rotation applied"
-[img4]: ./images/rotated_img.png "Image with random shift applied"
+[img4]: ./images/shifted_img.png "Image with random shift applied"
 [img5]: ./images/steering_angle_before_flattening.png "Steering angle distribution before flattening"
 [img6]: ./images/steering_angle_after_distribution.png "Steering angle distribution before flattening"
 
@@ -141,9 +141,11 @@ The next step was to recover data to teach the model how to "recover" if it veer
 Based on the nVidia paper, I included two methods for augmenting the data: shift (model.py line 87) and rotation (model.py line 109). I used these methods to further augment my validation data, to make it harder for the model and hopefully get better generalization. 
 
 Here is what a shifted image looks like: 
+
 ![alt text][img3]
 
 Here is what a rotated image looks like:
+
 ![alt text][img4]
 
 In the folder (old models), I've included some attempts. For model01, model02, I noticed that the car struggeled with the "recovery" scenario. I tried to go from 3 epochs to 5, which resulted in a horrible model (model03). This model clearly suffered from overfitting, (stagnation in loss, and increase in validation loss for last 2 epochs). I tried to go the other way, I lowered the number of epochs to 2, and made the data distribution flattening more aggressive. Additionally I increased the the steering angle offset (model.py line 182) to help with the recovery scenario. Model04, model05, model06, model07 are mainly the result of variation in how much i flattened the data distribution, and the steering angle offset. I was getting a little frustrated at this point. The main problem was that the car would come off the bridge too far to the left, and touch the edge. It also struggled with the left turn right after.I collected some more data, where I recorded this section one clockwise, and once counter clockwise. Finally, it worked, and the resulting model is the one I have submitted. 
