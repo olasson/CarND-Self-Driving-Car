@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./my_images/undist_calib_1.png "Calibration Output"
+[image1]: ./my_images/calib_full_output.png "Calibration Output"
 [image2]: ./my_images/undist_calib_1.png "Undistorted Calibration Image"
 [image3]: ./my_images/undist_calib_2.png "Undistorted Test Image"
 [image4]: ./my_images/combined_messy.png "Messy Thresholding"
