@@ -26,7 +26,7 @@ The goals / steps of this project are the following:
 [image5]: ./my_images/combined_clean.png "Clean Thresholding"
 [image6]: ./my_images/birds_eye_transform.png "Birds-eye"
 [image7]: ./my_images/src_and_dst.png "Src and Dst"
-[image8]: ./my_images/slid_window_poly.png "Sliding window polynomial fit output"
+[image8]: ./my_images/slid_wind_poly.png "Sliding window polynomial fit output"
 [image9]: ./my_images/slid_window_prev_poly.png "Sliding window polynomial using previous fit output"
 [image10]: ./my_images/text_and_lane.png "Text and lane Drawn"
 
