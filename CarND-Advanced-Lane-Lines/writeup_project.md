@@ -23,7 +23,7 @@ The goals / steps of this project are the following:
 [image2]: ./my_images/undist_calib_1.png "Undistorted Calibration Image"
 [image3]: ./my_images/undist_calib_2.png "Undistorted Test Image"
 [image4]: ./my_images/combined_messy.png "Messy Thresholding"
-[image5]: ./my_images/clean_messy.png "Clean Thresholding"
+[image5]: ./my_images/combined_clean.png "Clean Thresholding"
 [image6]: ./my_images/birds_eye_transform.png "Birds-eye"
 [image7]: ./my_images/src_and_dst.png "Src and Dst"
 [image8]: ./my_images/slid_window_poly.png "Sliding window polynomial fit output"
@@ -144,11 +144,11 @@ This step uses the functions `draw_lane()` and `draw_data()` found in code cell 
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [Project Video Output](./project_video_output.mp4)
+* Link [Project Video Output](./project_video_output.mp4)
 
 I also tried my implementation on the challenge videos, here are some links for the interested:
-Here's a [Challenge Video Output](./challenge_video_output.mp4)
-Here's a [Harder Challenge Video Output](./harder_challenge_video.mp4)
+* Link [Challenge Video Output](./challenge_video_output.mp4)
+* Link [Harder Challenge Video Output](./harder_challenge_video.mp4)
 
 
 ---
