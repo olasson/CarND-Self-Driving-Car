@@ -139,7 +139,7 @@ Here are three examples of applying the pipeline to test images (from code cell 
 
 ![alt text][image14]
 
-The final implementation performs decently. It identifying the nearby vehicles in each of the frames with one false positive.
+The final implementation performs decently. It is able to identify the nearby vehicles in each of the frames with one false positive for the entire video.
 
 I have included some old attempts at the project and test video in the folder `old_attempts`. The biggest problem was false positives, which I fixed by tuning the heatmap threshold. The biggest optimization of the pipeline was changing the `pixels_per_cell` parameter from its default value to 16. It was a non-trivial speed up in terms of computation time, at the cost of a small loss of accuracy. 
 
