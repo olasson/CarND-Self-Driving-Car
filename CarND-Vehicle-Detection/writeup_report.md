@@ -86,7 +86,7 @@ VS.
 * `cell_per_block` = 2
 * `hog_channel` = 'ALL'
 
-The `HSV` set had slightly better accuracy than the `YUV` set, but the `YUV` set "won" since it had a much better training and (perhaps more importantly) extraction time. My final choice of paramters is found in code cell 10. 
+The `HSV` set had slightly better accuracy than the `YUV` set, but the `YUV` set "won" since it had a much better training and extraction time. My final choice of paramters is found in code cell 10. 
 
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
