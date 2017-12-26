@@ -25,7 +25,7 @@ The goals / steps of this project are the following:
 [image8]: ./my-images/search_multiple.png
 [image9]: ./my-images/hmap_before_thresh.png
 [image10]: ./my-images/hmap_after_thresh.png
-[image11]: ./my-images/hmap_pipeline_output.png
+[image11]: ./my-images/pipeline_output.png
 [image12]: ./my-images/pipeline1.png
 [image13]: ./my-images/pipeline2.png
 [image14]: ./my-images/pipeline3.png
