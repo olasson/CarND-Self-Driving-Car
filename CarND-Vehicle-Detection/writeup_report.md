@@ -24,8 +24,8 @@ The goals / steps of this project are the following:
 [image7]: ./my-images/search_space.png
 [image8]: ./my-images/search_multiple.png
 [image9]: ./my-images/hmap_before_thresh.png
-[image10]: ./my-images/hmap_before_thresh.png
-[image11]: ./my-images/hmap_after_thresh.png
+[image10]: ./my-images/hmap_after_thresh.png
+[image11]: ./my-images/hmap_pipeline_output.png
 [image12]: ./my-images/pipeline1.png
 [image13]: ./my-images/pipeline2.png
 [image14]: ./my-images/pipeline3.png
@@ -178,5 +178,5 @@ Problems encountered was mainly concerned with detection accuracy. Finding a bal
 * Improve the accuracy
 * Predict vehicle location based on previous frames and use it to limit search area. 
 * A neural network could omitt the sliding window technique. 
-* For oncoming traffic and far-away cars, I tried smaller scales, but it resulted in sooooo many false positives. 
+* For oncoming traffic and far-away cars, I tried smaller scales, but it resulted alot of false positives.
 
