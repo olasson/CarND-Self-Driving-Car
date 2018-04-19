@@ -23,6 +23,9 @@ A P-controller can never achieve zero error on its own, making the I-term useful
 I took two measures to combat this. First, I kept the gains on the I-terms low. Second, I implemented a very simple "anti windup" mechanism, which effectively saturates the I-term, keeping it from growing indefinitely.
 
 
+This term behaved as expected; without windup it would eventually make the system unstable. Additionally, it seemed VERY sensitive to "high" values of Ki, relative to Kp and Kd.  
+
+
 
 ### Derivative part of controller (D)
 
