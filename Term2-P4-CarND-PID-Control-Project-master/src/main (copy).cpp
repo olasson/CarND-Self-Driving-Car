@@ -39,14 +39,9 @@ int main(){
   // Added by me START
   //******************
 
-  // Set controller gains
-  //double Kp_ = 0.265;
-  //double Ki_ = 0.095;
-  //double Kd_ = 2.995;
-
-  double Kp_ = 0.134611;
-  double Ki_ = 0.000270736;
-  double Kd_ = 3.05349;
+  double Kp_ = 0.0;
+  double Ki_ = 0.0;
+  double Kd_ = 3.0;
 
   pid.Init(Kp_, Ki_, Kd_);
 
