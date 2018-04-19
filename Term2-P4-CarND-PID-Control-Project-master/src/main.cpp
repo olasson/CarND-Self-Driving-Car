@@ -72,7 +72,7 @@ int main(){
           // j[1] is the data JSON object
           double cte = std::stod(j[1]["cte"].get<std::string>());
           double speed = std::stod(j[1]["speed"].get<std::string>());
-          //double angle = std::stod(j[1]["steering_angle"].get<std::string>());
+          double angle = std::stod(j[1]["steering_angle"].get<std::string>());
           double steer_value;
 
 
@@ -87,11 +87,11 @@ int main(){
           pid_steer.UpdateError(cte);
           steer_value = pid_steer.CaculateControllerOutput();
 
-          // Run PID on speed to produce a throttle value
+          // Run PID on a weighted sum of speed and angle to produce a throttle value
           pid_throttle.current_sample_number = pid_throttle.current_sample_number + 1;
-          pid_throttle.UpdateError(speed);
+          pid_throttle.UpdateError(fabs(speed - (10.0 * fabs(angle))));
           // This value has to be scaled down by a factor, or else the speed goes beserk in the simulator
-          throttle = 0.2 * pid_throttle.CaculateControllerOutput();
+          throttle = 0.3 * pid_throttle.CaculateControllerOutput();
     
           //******************
           // Added by me END
