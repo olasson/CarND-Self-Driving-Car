@@ -154,7 +154,7 @@ int main() {
 
 					// Calculate current cte and orientation errors for no latency case
 					double cte_t0 = polyeval(coeffs, 0); 
-					double eps_t0 = -atan(coeffs[1]); 
+					double epsi_t0 = -atan(coeffs[1]); 
 
 
 					double steer_value = j[1]["steering_angle"];
@@ -162,8 +162,8 @@ int main() {
 					double throttle_value = j[1]["throttle"];
 
 					// Predict cte and orientation errors for latency case
-					double cte_t1 = cte_t0 + (v * sin(eps_t0) * dT); 
-					double eps_t1 = eps_t0 + (v * steer_value * dT) / Lf; 
+					double cte_t1 = cte_t0 + (v * sin(epsi_t0) * dT); 
+					double epsi_t1 = epsi_t0 + (v * steer_value * dT) / Lf; 
 
 					// Predict x, y, psi and v to account for latency
 					px = 0 + (v * cos(0) * dT);
@@ -173,7 +173,7 @@ int main() {
 
 					// Create state vector
 					Eigen::VectorXd state(6);
-					state << px, py, psi, v, cte_t1, eps_t1; // This is for the latency case
+					state << px, py, psi, v, cte_t1, epsi_t1; // This is for the latency case
 
 					// Solve MPC optimization problem
 					auto vars = mpc.Solve(state, coeffs);

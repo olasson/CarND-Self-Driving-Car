@@ -35,7 +35,7 @@ const double Lf = 2.67;
 
 // Define reference values
 const double REF_CTE = 0.0;
-const double REF_EPS = 0.0;
+const double REF_EPSI = 0.0;
 const double REF_VELOCITY = 40.0;
 
 // Define weights for cost calculations
@@ -81,7 +81,7 @@ public:
 		// Calculate the reference state cost
 		for (unsigned int t = 0; t < N; t++) {
 			fg[0] += WEIGHT_CTE * CppAD::pow(vars[IDX_CTE_START + t] - REF_CTE, 2);
-			fg[0] += WEIGHT_EPS * CppAD::pow(vars[IDX_EPS_START + t] - REF_EPS, 2);
+			fg[0] += WEIGHT_EPS * CppAD::pow(vars[IDX_EPS_START + t] - REF_EPSI, 2);
 			fg[0] += CppAD::pow(vars[IDX_V_START + t] - REF_VELOCITY, 2);
 		}
 
