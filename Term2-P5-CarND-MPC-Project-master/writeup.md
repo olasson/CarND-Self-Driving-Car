@@ -3,6 +3,8 @@
 [//]: # (Image References)
 
 [image1]: ./writeup_images/kinematic_eqs.png "Kinematic equations"
+[image2]: ./writeup_images/cte_error.png "Cte error"
+[image3]: ./writeup_images/orientation_error.png "Orientation error"
 
 
 ---
@@ -28,6 +30,12 @@ where
 The state variables are calulated using the following set of equations
 
 ![alt text][image1]
+
+There are two error tems of interest. 
+
+The cross track error `(cte)`
+
+The heading error (or orientation error) `(epsi)`
 
 ### Timestep Length and Elapsed Duration (N & dt)
 
