@@ -173,7 +173,7 @@ int main() {
 
 					// Create state vector
 					Eigen::VectorXd state(6);
-					state << px, py, psi, v, cte_t1, epsi_t1; // This is for the latency case
+					state << px, py, psi, v, cte_t1, epsi_t1; // For the latency case
 
 					// Solve MPC optimization problem
 					auto vars = mpc.Solve(state, coeffs);
